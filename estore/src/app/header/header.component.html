@@ -4,10 +4,29 @@
       <h1>eStore</h1>
     </div>
     <div class="d-flex p-0 my-4 w-50 h-25 bg-white">
+      <select name="" id="" class="dropdown p-0 m-0">
+        <option value="">Men</option>
+        <option value="">Women</option>
+        <option value="">Kids</option>
+      </select>
       <input type="text" class="form-control search-box" placeholder="Search..." />
       <button class="search-button">
         <fa-icon [icon]="faSearch"></fa-icon>
       </button>
+    </div>
+    <div class="login-container p-0">
+      <fa-icon class="user-icon" [icon]="faUserCircle"></fa-icon>
+      <h5><a href="#">Sign in</a></h5> / <h5><a href="#">Register</a></h5>
+    </div>
+    <div class="cart-wishlist">
+      <ul class="p-0">
+        <li class="list-item">
+          <fa-icon [icon]="faHeart"></fa-icon>
+        </li>
+        <li class="list-item">
+          <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
