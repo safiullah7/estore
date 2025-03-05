@@ -3,6 +3,10 @@ import {ProductsGalleryComponent} from './components/products-gallery/products-g
 import {HomeComponent} from './home.component';
 import {ProductdetailsComponent} from './components/productdetails/productdetails.component';
 import {CartComponent} from './components/cart/cart.component';
+import {UserSignupComponent} from './components/users/user-signup/user-signup.component';
+import {UserLoginComponent} from './components/users/user-login/user-login.component';
+import {PastordersComponent} from './components/pastorders/pastorders.component';
+import {authGuard} from './services/authGuard';
 
 export const routes: Routes = [
   {
@@ -12,6 +16,9 @@ export const routes: Routes = [
       { path: 'products', component: ProductsGalleryComponent },
       { path: 'product/:id', component: ProductdetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'signup', component: UserSignupComponent },
+      { path: 'login', component: UserLoginComponent },
+      { path: 'pastorders', component: PastordersComponent, canActivate:[authGuard] },
     ]
   },
 ]

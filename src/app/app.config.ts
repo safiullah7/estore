@@ -8,6 +8,8 @@ import {CategoriesStoreItem} from './home/services/category/categories.storeItem
 import {ProductsService} from './home/services/product/products.service';
 import {ProductsStoreItem} from './home/services/product/products.storeItem';
 import {CartStoreItem} from './home/services/cart/cart.storeItem';
+import {OrderService} from './home/services/order/order.service';
+import {UserService} from './home/services/users/user.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +18,8 @@ export const appConfig: ApplicationConfig = {
     [CategoryService, CategoriesStoreItem],
     [ProductsService, ProductsStoreItem],
     [CartStoreItem],
+    [UserService],
+    [OrderService],
     provideRouter(routes)
   ]
 };
